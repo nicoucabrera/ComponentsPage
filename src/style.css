@@ -200,10 +200,11 @@ html, body {
 }
 
 #menu:checked ~ .blur-background {
-  transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease;
   z-index: 2;
   background-color: rgba(0, 0, 0, 0.3);
   animation: square-in-bottom-left 2s cubic-bezier(.25, 1, .30, 1) both;
+  display: block;
 }
 
 @keyframes square-in-bottom-left {
@@ -229,10 +230,9 @@ html, body {
   bottom: -100px;
   width: 100%;
   background-color: transparent;
-  transition: all 0.2s ease-in-out;
   overflow: hidden;
   backdrop-filter: blur(5px);
-  animation: square-out-top-right 2s cubic-bezier(.25, 1, .30, 1) both;
+  display: none;
 }
 
 @keyframes square-out-top-right {

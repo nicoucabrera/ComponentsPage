@@ -1,6 +1,6 @@
 <script>
 export default {
-  name: 'Item4',
+  name: 'Carousel',
 }
 </script>
 
