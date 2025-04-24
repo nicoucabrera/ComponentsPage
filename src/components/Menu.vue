@@ -19,10 +19,10 @@ export default {
           <img src="https://avatars.githubusercontent.com/u/108552455?v=4" alt="mi foto" class="foto-perfil alternativa">
         </div>
         <p class="descripcion parpadeo">
-          Soy Nico.<br>
-          Me gusta diseñar webs divertidas.<br>
-          Aprendiz y apasionado del frontend. <s>que se pudra el backend</s><br>
-          Creyente del margin negativo.<br>
+          Soy Nicolás Cabrera.<br>
+          Apasionado del frontend.<br>
+          En constante aprendizaje para crecer tanto en lo personal como en lo profesional.<br>
+          <br>
           Objetivos: <br>
           - Centrar un div <br>
           - Borrar una base de datos <br>
