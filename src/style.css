@@ -42,7 +42,7 @@ html, body {
   grid-area: main;
   color: #ffffff;
   flex-direction: column;
-  height: 700px;
+  height: auto;
   margin: 10px;;
 }
 
@@ -193,6 +193,7 @@ html, body {
   width: 80px;
   height: 50px;
   place-items: center;
+  align-items: start;
 }
 
 #menu {
@@ -227,7 +228,7 @@ html, body {
 .blur-background {
   position: relative;
   left: -20px;
-  bottom: -100px;
+  bottom: -8px;
   width: 100%;
   background-color: transparent;
   overflow: hidden;
@@ -255,7 +256,9 @@ html, body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-content: center;
 }
+
 
 .div-nav{
   align-self: center;;
@@ -709,6 +712,7 @@ a {
   display: flex;
   justify-content: center;
   gap: 40px;
+  margin-bottom: 20px;
 }
 
 .btn {
@@ -773,6 +777,7 @@ h2 {
 
 @media (max-width: 500px) {
   .item-3 {
+    min-width: 90%;
     justify-items: center;
     grid-template-columns: 1fr 100px;
     grid-template-rows: repeat(5, auto);
@@ -780,12 +785,12 @@ h2 {
       "searchInput searchButton"
       "pokecard pokecard"
       "pokeimg pokeimg";
-  }
-  
+  }  
 }
 
 .poke-card {
   width: 100%;
+  height: min-content;
   grid-area: pokecard;
   align-items: center;
   justify-items: center;
@@ -793,9 +798,13 @@ h2 {
   grid-template-rows: auto;
   grid-auto-columns: auto;
   grid-template-areas: 
-  "pokename pokename"
-  "pokeability pokemoves" 
-  "pokeability-list moves";
+  "pokename"
+  "."
+  "pokeability" 
+  "pokeability-list"
+  "."
+  "pokemoves"
+  "moves";
 }
 
 #search-input {
@@ -819,7 +828,7 @@ h2 {
 
 .pokename {
   text-align: center;
-  font-size: 35px;
+  font-size: 45px;
   color: #ffff00;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 1.5);
   font-family: 'Comic Sans MS', cursive, sans-serif;
@@ -829,32 +838,27 @@ h2 {
 
 .pokeability {
   text-align: center;
-  font-size: 24px;
+  font-size: 30px;
   color: #ff0000;
-  -webkit-text-stroke: 1px black;
   font-family: 'Comic Sans MS', cursive, sans-serif;
-  text-shadow: 2px 2px 4px #ffffff;
+  text-shadow: 2px 2px 4px #000000;
   grid-area: pokeability;
-  margin-bottom: 5px;
 }
 .pokeability-list {
   text-align: start;
   justify-self: center;
-  color: #ff000090;
-  -webkit-text-stroke: 1px black;
-  text-shadow: 2px 2px 4px #ffffff;
+  color: #ff0000;
+  text-shadow: 2px 2px 4px #000000;
   font-size: 22px;
   font-family: 'Comic Sans MS', cursive, sans-serif;
   grid-area: pokeability-list;
 }
 
 .pokemoves {
-  margin-top: 5px;
   justify-self: center;
   color: rgb(0, 195, 255);
-  -webkit-text-stroke: 1px black;
-  text-shadow: 2px 2px 4px #ffffff;
-  font-size: 24px;
+  text-shadow: 2px 2px 4px #000000;
+  font-size: 30px;
   font-family: 'Comic Sans MS', cursive, sans-serif;
   grid-area: pokemoves;
   padding: 5px;
@@ -865,15 +869,20 @@ h2 {
   text-align: center;
   font-size: 22px;
   color: rgba(0, 195, 225, 0.8);
-  text-shadow: 2px 2px 4px #ffffff;
-  -webkit-text-stroke: 1px black;
+  text-shadow: 2px 2px 4px #000000;
   font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.poke-image {
+  width: 200px;
+  height: 200px;
+  align-self: center;
+  grid-area: pokeimg;
 }
 
 .poke-img {
   width: 200px;
   height: 200px;
-  grid-area: pokeimg;
 }
 
 .poke-placeholder {
@@ -900,17 +909,18 @@ h2 {
 
 .carousel {
   perspective: 450px;
-  width: 600px;
+  width: 370px;
   height: 300px;
   position: relative;
   display: flex;
   justify-content: center;
   padding: 25px;
+  margin-bottom: 20px;
 }
 
 .tarjeta {
   width: 120px;
-  height: 180px;
+  height: 200px;
   position: absolute;
   border-radius: 8px;
   text-align: center;
@@ -918,6 +928,11 @@ h2 {
   top: 25%;
   animation: carousel 8s linear infinite;
 }
+
+.carousel:hover .tarjeta {
+  animation-play-state: paused;
+}
+
 
 @keyframes carousel {
   from {

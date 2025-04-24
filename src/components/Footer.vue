@@ -7,7 +7,7 @@ export default {
 <template>
     <footer class="footer">
         <div class="footer-content">
-            <p>2025 Nicolas Cabrera.</p>
+            &copy; 2025 Nicolas Cabrera.
         </div>
     </footer>
 </template>
